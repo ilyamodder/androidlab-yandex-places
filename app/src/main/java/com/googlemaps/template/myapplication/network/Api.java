@@ -7,6 +7,6 @@ import retrofit.http.Query;
  * Created by ilya on 15.09.15.
  */
 public interface Api {
-    @GET("/?format=json&kind=locality")
+    @GET("/?format=json&kind=locality&results=8")
     Places getPlaces(@Query("geocode") String geocode);
 }
