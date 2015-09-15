@@ -17,7 +17,7 @@ public class SpiceService extends RetrofitGsonSpiceService {
     RestAdapter.Builder restAdapterBuilder;
     private Map<Class<?>, Object> retrofitInterfaceToServiceMap = new HashMap<Class<?>, Object>();
     private Map<Class<?>, String> retrofitInterfaceToUrl = new HashMap<Class<?>, String>() {{
-        put(Api.class, "https://geocode-maps.yandex.ru/1.x");
+        put(PlacesApi.class, "https://geocode-maps.yandex.ru/1.x");
         put(DirectionsApi.class, "https://maps.googleapis.com/maps/api/directions");
     }};
 
