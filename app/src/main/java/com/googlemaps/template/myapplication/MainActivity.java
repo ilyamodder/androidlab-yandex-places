@@ -14,6 +14,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -23,6 +24,7 @@ import com.googlemaps.template.myapplication.network.Directions;
 import com.googlemaps.template.myapplication.network.DirectionsRequest;
 import com.googlemaps.template.myapplication.network.DrawingPoints;
 import com.googlemaps.template.myapplication.network.GeocoderPlacesRequest;
+import com.googlemaps.template.myapplication.network.PlacePoints;
 import com.googlemaps.template.myapplication.network.Places;
 import com.googlemaps.template.myapplication.network.SpiceService;
 import com.octo.android.robospice.SpiceManager;
@@ -37,8 +39,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     SupportMapFragment mapFragment;
     GoogleApiClient googleApiClient;
     Location location;
-    Places places;
+    PlacePoints placePoints;
     GoogleMap googleMap;
+    DrawingPoints drawingPoints;
 
     private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
 
@@ -72,7 +75,32 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 .addConnectionCallbacks(this)
                 .build();
 
-        if (googleApiClient != null) googleApiClient.connect();
+        if (savedInstanceState == null) {
+            if (googleApiClient != null) googleApiClient.connect();
+        } else {
+            location = savedInstanceState.getParcelable("location");
+            drawingPoints = savedInstanceState.getParcelable("drawingPoints");
+            placePoints = savedInstanceState.getParcelable("placePoints");
+            final CameraPosition cameraPosition = savedInstanceState.getParcelable("cameraPosition");
+            mapFragment.getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap googleMap) {
+                    MainActivity.this.googleMap = googleMap;
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cameraPosition.target, cameraPosition.zoom));
+                    drawPlaces();
+                    drawPath();
+                }
+            });
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("location", location);
+        outState.putParcelable("drawingPoints", drawingPoints);
+        outState.putParcelable("placePoints", placePoints);
+        outState.putParcelable("cameraPosition", googleMap.getCameraPosition());
     }
 
     @Override
@@ -88,15 +116,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void processLocation() {
         GeocoderPlacesRequest request = new GeocoderPlacesRequest(location.getLongitude(), location.getLatitude());
-        getSpiceManager().execute(request, new RequestListener<Places>() {
+        getSpiceManager().execute(request, new RequestListener<PlacePoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
 
             }
 
             @Override
-            public void onRequestSuccess(Places places) {
-                MainActivity.this.places = places;
+            public void onRequestSuccess(PlacePoints placePoints) {
+                MainActivity.this.placePoints = placePoints;
                 mapFragment.getMapAsync(MainActivity.this);
             }
         });
@@ -119,32 +147,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         this.googleMap = googleMap;
 
-        List<LatLng> waypoints = new ArrayList<>();
-
-        //adding places around us
-        for (Places.Item item : places.response.GeoObjectCollection.featureMember) {
-            String[] pos = item.GeoObject.Point.pos.split(" ");
-            String name = item.GeoObject.name;
-
-            LatLng position = new LatLng(Double.valueOf(pos[1]), Double.valueOf(pos[0]));
-
-            googleMap.addMarker(new MarkerOptions()
-                                        .title(name)
-                                        .position(position)
-            );
-
-            waypoints.add(position);
-        }
-
-        //adding current location
-        googleMap.addCircle(new CircleOptions()
-                                    .center(new LatLng(location.getLatitude(), location.getLongitude()))
-                                    .fillColor(Color.BLUE)
-                                    .radius(100));
+        drawPlaces();
 
         //sending request for directions
         DirectionsRequest request = new DirectionsRequest(new LatLng(location.getLatitude(),
-                location.getLongitude()), waypoints);
+                location.getLongitude()), placePoints);
         getSpiceManager().execute(request, new RequestListener<DrawingPoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
@@ -153,14 +160,40 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             @Override
             public void onRequestSuccess(DrawingPoints drawingPoints) {
-                PolylineOptions polylineOptions = new PolylineOptions().color(Color.BLUE);
-                for (LatLng point : drawingPoints.points) {
-                    polylineOptions.add(point);
-                }
-                googleMap.addPolyline(polylineOptions);
+                MainActivity.this.drawingPoints = drawingPoints;
+                drawPath();
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                         new LatLng(location.getLatitude(), location.getLongitude()), 11));
             }
         });
+    }
+
+    private void drawPath() {
+        PolylineOptions polylineOptions = new PolylineOptions().color(Color.BLUE);
+        for (LatLng point : drawingPoints.points) {
+            polylineOptions.add(point);
+        }
+        googleMap.addPolyline(polylineOptions);
+    }
+
+    private void drawPlaces() {
+        //adding places around us
+        for (PlacePoints.Point item : placePoints.points) {
+            String name = item.name;
+
+            LatLng position = item.position;
+
+            googleMap.addMarker(new MarkerOptions()
+                            .title(name)
+                            .position(position)
+            );
+
+        }
+
+        //adding current location
+        googleMap.addCircle(new CircleOptions()
+                .center(new LatLng(location.getLatitude(), location.getLongitude()))
+                .fillColor(Color.BLUE)
+                .radius(100));
     }
 }

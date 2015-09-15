@@ -16,19 +16,21 @@ public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, Direc
     String destination;
     String appKey = "AIzaSyD3GCtchyQ3zJ33efR9iB39LLZtXSRqSOQ";
 
-    public DirectionsRequest(LatLng origin, List<LatLng> waypoints) {
+    public DirectionsRequest(LatLng origin, PlacePoints placePoints) {
         super(DrawingPoints.class, DirectionsApi.class);
 
-        LatLng destination = waypoints.remove(waypoints.size() - 1);
+        List<PlacePoints.Point> waypoints = placePoints.points;
+
+        LatLng destination = waypoints.remove(waypoints.size() - 1).position;
 
         this.origin = origin.latitude + "," + origin.longitude;
         this.destination = destination.latitude + "," + destination.longitude;
 
         StringBuffer stringBuffer = new StringBuffer("optimize:true|");
-        for (LatLng waypoint : waypoints) {
-            stringBuffer.append(waypoint.latitude);
+        for (PlacePoints.Point waypoint : waypoints) {
+            stringBuffer.append(waypoint.position.latitude);
             stringBuffer.append(",");
-            stringBuffer.append(waypoint.longitude);
+            stringBuffer.append(waypoint.position.longitude);
             stringBuffer.append("|");
         }
         stringBuffer.deleteCharAt(stringBuffer.length() - 1);
@@ -48,8 +50,6 @@ public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, Direc
                 }
             }
         }
-        DrawingPoints drawingPoints = new DrawingPoints();
-        drawingPoints.points = points;
-        return drawingPoints;
+        return new DrawingPoints(points);
     }
 }
