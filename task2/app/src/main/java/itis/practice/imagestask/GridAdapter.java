@@ -1,6 +1,9 @@
 package itis.practice.imagestask;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,13 +41,30 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         Glide.with(mActivity)
                 .load(data.get(position))
                 .placeholder(R.drawable.ic_placeholder)
-                .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .skipMemoryCache(false)
+                .dontTransform()
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .into(holder.mImageView);
+        holder.mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, DetailActivity.class);
+                // Pass data object in the bundle and populate details activity.
+                intent.putExtra(DetailActivity.EXTRA_IMAGE_URL, data.get(position));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    ActivityOptionsCompat options = ActivityOptionsCompat.
+                            makeSceneTransitionAnimation(mActivity, holder.mImageView, "image");
+                    mActivity.startActivity(intent, options.toBundle());
+                } else {
+                    mActivity.startActivity(intent);
+                }
+
+            }
+        });
     }
 
     @Override
