@@ -64,8 +64,6 @@ public class MyContentProvider extends ContentProvider {
         Cursor cursor = mDb.query(table, projection, selection, selectionArgs, null,
                 null, sortOrder);
 
-        mDb.close();
-
         return cursor;
     }
 
@@ -100,8 +98,6 @@ public class MyContentProvider extends ContentProvider {
 
         long rowId = mDb.insert(table, null, values);
 
-        mDb.close();
-
         return ContentUris.withAppendedId(uri, rowId);
     }
 
@@ -124,7 +120,6 @@ public class MyContentProvider extends ContentProvider {
         }
 
         int count =  mDb.delete(table, selection, selectionArgs);
-        mDb.close();
         return count;
     }
 
@@ -149,7 +144,6 @@ public class MyContentProvider extends ContentProvider {
         mDb = mDBHelper.getWritableDatabase();
 
         int count = mDb.update(table, values, selection, selectionArgs);
-        mDb.close();
         return count;
     }
 }
