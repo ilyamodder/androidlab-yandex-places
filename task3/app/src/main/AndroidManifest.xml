@@ -40,6 +40,11 @@
             android:value="${googleApiKey}" />
 
         <service android:name=".network.SpiceService"/>
+        
+        <provider
+            android:authorities="com.googlemaps.template.myapplication.cachedata"
+            android:name=".database.MyContentProvider"
+            android:exported="false"/>
 
     </application>
 
