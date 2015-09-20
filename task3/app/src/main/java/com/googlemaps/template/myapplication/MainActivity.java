@@ -1,8 +1,10 @@
 package com.googlemaps.template.myapplication;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -18,22 +20,16 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolygonOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.googlemaps.template.myapplication.network.Directions;
 import com.googlemaps.template.myapplication.network.DirectionsRequest;
 import com.googlemaps.template.myapplication.network.DrawingPoints;
 import com.googlemaps.template.myapplication.network.GeocoderPlacesRequest;
 import com.googlemaps.template.myapplication.network.PlacePoints;
-import com.googlemaps.template.myapplication.network.Places;
 import com.googlemaps.template.myapplication.network.SpiceService;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, LocationListener, OnMapReadyCallback {
 
@@ -43,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     PlacePoints placePoints;
     GoogleMap googleMap;
     DrawingPoints drawingPoints;
+    boolean placesUpdatedFromNetwork = false;
+    boolean directionsUpdatedFromNetwork = false;
 
     private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
 
@@ -116,15 +114,35 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     public void processLocation() {
-        GeocoderPlacesRequest request = new GeocoderPlacesRequest(location.getLongitude(), location.getLatitude());
-        getSpiceManager().execute(request, PlacePoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<PlacePoints>() {
+        getSpiceManager().getFromCache(PlacePoints.class, PlacePoints.class, DurationInMillis.ALWAYS_RETURNED, new RequestListener<PlacePoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
-
+                loadPointsFromNetwork();
             }
 
             @Override
             public void onRequestSuccess(PlacePoints placePoints) {
+                MainActivity.this.placePoints = placePoints;
+                mapFragment.getMapAsync(MainActivity.this);
+            }
+        });
+
+
+    }
+
+    private void loadPointsFromNetwork() {
+        placesUpdatedFromNetwork = false;
+        directionsUpdatedFromNetwork = false;
+        GeocoderPlacesRequest request = new GeocoderPlacesRequest(location.getLongitude(), location.getLatitude());
+        getSpiceManager().execute(request, PlacePoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<PlacePoints>() {
+            @Override
+            public void onRequestFailure(SpiceException spiceException) {
+                if (MainActivity.this.placePoints == null) showErrorDialog();
+            }
+
+            @Override
+            public void onRequestSuccess(PlacePoints placePoints) {
+                placesUpdatedFromNetwork = true;
                 MainActivity.this.placePoints = placePoints;
                 mapFragment.getMapAsync(MainActivity.this);
             }
@@ -150,13 +168,36 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         drawPlaces();
 
-        //sending request for directions
+        if (!placesUpdatedFromNetwork) {
+            getSpiceManager().getFromCache(DrawingPoints.class, DrawingPoints.class, DurationInMillis.ALWAYS_RETURNED, new RequestListener<DrawingPoints>() {
+                @Override
+                public void onRequestFailure(SpiceException spiceException) {
+                    loadDirectionsFromNetwork();
+                }
+
+                @Override
+                public void onRequestSuccess(DrawingPoints drawingPoints) {
+                    MainActivity.this.drawingPoints = drawingPoints;
+                    drawPath();
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                            new LatLng(location.getLatitude(), location.getLongitude()), 11));
+                    loadPointsFromNetwork();
+                }
+            });
+        } else {
+            loadDirectionsFromNetwork();
+        }
+
+
+    }
+
+    private void loadDirectionsFromNetwork() {
         DirectionsRequest request = new DirectionsRequest(new LatLng(location.getLatitude(),
                 location.getLongitude()), placePoints);
         getSpiceManager().execute(request, DrawingPoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<DrawingPoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
-                System.out.println(spiceException);
+                showErrorDialog();
             }
 
             @Override
@@ -165,8 +206,40 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 drawPath();
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                         new LatLng(location.getLatitude(), location.getLongitude()), 11));
+                directionsUpdatedFromNetwork = true;
+                showDataUpdatedDialog();
             }
         });
+    }
+
+    private void showDataUpdatedDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.main_dialog_data_updated_title)
+                .setMessage(R.string.main_dialog_data_updated_message)
+                .setPositiveButton(R.string.main_dialog_data_updated_ok_button, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).show();
+    }
+
+    private void showErrorDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.main_dialog_error_title))
+                .setMessage(getString(R.string.main_dialog_error_message))
+                .setPositiveButton(getString(R.string.main_dialog_error_ok_button), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setNeutralButton(getString(R.string.main_dialog_error_retry_button), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (placesUpdatedFromNetwork) loadDirectionsFromNetwork();
+                else loadPointsFromNetwork();
+            }
+        }).show();
     }
 
     private void drawPath() {

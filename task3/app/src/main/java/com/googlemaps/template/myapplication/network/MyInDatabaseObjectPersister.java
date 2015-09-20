@@ -160,8 +160,9 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
     @Override
     public boolean isDataInCache(Object cacheKey, long maxTimeInCacheBeforeExpiry) {
         Uri uri = classToUri.get(mCacheClass);
-        Cursor cursor = context.getContentResolver().query(uri, null, null, null, null);
-        int count = cursor.getCount();
+        Cursor cursor = context.getContentResolver().query(uri, new String[]{"count(*) AS count"}, null, null, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
         cursor.close();
         return count > 0;
     }

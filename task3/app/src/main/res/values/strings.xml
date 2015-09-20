@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="main_dialog_data_updated_title">Обновлено</string>
+    <string name="main_dialog_data_updated_message">Данные обновлены из сети</string>
+    <string name="main_dialog_data_updated_ok_button">ОК</string>
+    <string name="main_dialog_error_title">Ошибка</string>
+    <string name="main_dialog_error_message">При загрузке данных произошла ошибка. Проверьте ваше соединение с сетью.</string>
+    <string name="main_dialog_error_ok_button">ОК</string>
+    <string name="main_dialog_error_retry_button">Повторить</string>
 </resources>
