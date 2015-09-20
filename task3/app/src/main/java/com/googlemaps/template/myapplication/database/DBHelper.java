@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
+import android.util.Log;
 
 /**
  * Created by ilya on 20.09.15.
@@ -35,6 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
         super(context, DB_NAME, null, VERSION);
+        Log.d("db", "constructor");
     }
 
     @Override
@@ -47,6 +49,7 @@ public class DBHelper extends SQLiteOpenHelper {
         } finally {
             db.endTransaction();
         }
+        Log.d("db", "onCreate");
     }
 
     @Override

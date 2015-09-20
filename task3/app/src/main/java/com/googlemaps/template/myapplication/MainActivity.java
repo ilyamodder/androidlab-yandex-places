@@ -28,6 +28,7 @@ import com.googlemaps.template.myapplication.network.PlacePoints;
 import com.googlemaps.template.myapplication.network.Places;
 import com.googlemaps.template.myapplication.network.SpiceService;
 import com.octo.android.robospice.SpiceManager;
+import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
 
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void processLocation() {
         GeocoderPlacesRequest request = new GeocoderPlacesRequest(location.getLongitude(), location.getLatitude());
-        getSpiceManager().execute(request, new RequestListener<PlacePoints>() {
+        getSpiceManager().execute(request, PlacePoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<PlacePoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
 
@@ -152,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         //sending request for directions
         DirectionsRequest request = new DirectionsRequest(new LatLng(location.getLatitude(),
                 location.getLongitude()), placePoints);
-        getSpiceManager().execute(request, new RequestListener<DrawingPoints>() {
+        getSpiceManager().execute(request, DrawingPoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<DrawingPoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
                 System.out.println(spiceException);

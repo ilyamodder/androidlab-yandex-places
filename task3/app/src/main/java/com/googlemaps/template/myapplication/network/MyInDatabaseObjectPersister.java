@@ -149,7 +149,7 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
     @Override
     public void removeAllDataFromCache() {
         Uri uri = classToUri.get(mCacheClass);
-        context.getContentResolver().delete(uri, "*", null);
+        context.getContentResolver().delete(uri, null, null);
     }
 
     @Override
