@@ -130,6 +130,26 @@ public class MyContentProvider extends ContentProvider {
 
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-        throw new UnsupportedOperationException();
+        mDb = mDBHelper.getWritableDatabase();
+
+        String table;
+
+        switch (uriMatcher.match(uri)) {
+            case URI_DIRECTIONS:
+                table = DBHelper.TABLE_DIRECTIONS;
+                break;
+            case URI_PLACES:
+                table = DBHelper.TABLE_POINTS;
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown uri " + uri.toString());
+
+        }
+
+        mDb = mDBHelper.getWritableDatabase();
+
+        int count = mDb.update(table, values, selection, selectionArgs);
+        mDb.close();
+        return count;
     }
 }

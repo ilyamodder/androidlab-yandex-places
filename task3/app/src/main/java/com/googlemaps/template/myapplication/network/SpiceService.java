@@ -1,5 +1,11 @@
 package com.googlemaps.template.myapplication.network;
 
+import android.app.Application;
+
+import com.google.android.gms.location.places.Place;
+import com.octo.android.robospice.persistence.CacheManager;
+import com.octo.android.robospice.persistence.exception.CacheCreationException;
+import com.octo.android.robospice.persistence.retrofit.JacksonRetrofitObjectPersisterFactory;
 import com.octo.android.robospice.retrofit.RetrofitGsonSpiceService;
 
 import org.apache.commons.lang3.NotImplementedException;
@@ -45,5 +51,13 @@ public class SpiceService extends RetrofitGsonSpiceService {
             retrofitInterfaceToServiceMap.put(serviceClass, service);
         }
         return service;
+    }
+
+    @Override
+    public CacheManager createCacheManager(Application application) throws CacheCreationException {
+        CacheManager manager = new CacheManager();
+        manager.addPersister(new MyInDatabaseObjectPersister<>(application, PlacePoints.class));
+        manager.addPersister(new MyInDatabaseObjectPersister<>(application, DrawingPoints.class));
+        return manager;
     }
 }
