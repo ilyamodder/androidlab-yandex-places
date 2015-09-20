@@ -67,6 +67,7 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
             while (cursor.moveToNext()) {
                 double latitude = cursor.getDouble(cursor.getColumnIndex(DBHelper.FIELD_LATITUDE));
                 double longitude = cursor.getDouble(cursor.getColumnIndex(DBHelper.FIELD_LONGITUDE));
+                int id = cursor.getInt(cursor.getColumnIndex(DBHelper.FIELD_ID));
 
                 String shortDescription =
                         cursor.getString(cursor.getColumnIndex(DBHelper.FIELD_SHORT_DESCRIPTION));
@@ -74,7 +75,7 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
                         cursor.getString(cursor.getColumnIndex(DBHelper.FIELD_LONG_DESCRIPTION));
 
                 PlacePoints.Point point = new PlacePoints.Point(shortDescription,
-                        new LatLng(latitude, longitude), longDescription);
+                        new LatLng(latitude, longitude), longDescription, id);
                 pointsList.add(point);
             }
 

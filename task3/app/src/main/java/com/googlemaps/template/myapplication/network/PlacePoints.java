@@ -24,14 +24,16 @@ public class PlacePoints implements Parcelable {
             this.position = position;
         }
 
+        public int id;
         public String name;
         public LatLng position;
         public String description;
 
-        public Point(String name, LatLng position, String description) {
+        public Point(String name, LatLng position, String description, int id) {
             this.name = name;
             this.position = position;
             this.description = description;
+            this.id = id;
         }
 
         protected Point(Parcel in) {
