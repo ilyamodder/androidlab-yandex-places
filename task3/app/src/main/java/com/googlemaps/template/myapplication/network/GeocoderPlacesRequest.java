@@ -11,16 +11,16 @@ import java.util.List;
  */
 public class GeocoderPlacesRequest extends RetrofitSpiceRequest<PlacePoints, PlacesApi> {
 
-    String geocode;
+    String mGeocode;
 
     public GeocoderPlacesRequest(double longitude, double latitude) {
         super(PlacePoints.class, PlacesApi.class);
-        geocode = String.valueOf(longitude) + "," + latitude;
+        mGeocode = String.valueOf(longitude) + "," + latitude;
     }
 
     @Override
     public PlacePoints loadDataFromNetwork() throws Exception {
-        Places places =  getService().getPlaces(geocode);
+        Places places =  getService().getPlaces(mGeocode);
 
         List<PlacePoints.Point> points = new ArrayList<>();
 

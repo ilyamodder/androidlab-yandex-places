@@ -33,11 +33,11 @@ public class PlaceDescriptionActivity extends AppCompatActivity {
 
         mPoint = getIntent().getParcelableExtra(EXTRA_POINT);
 
-        setTitle(mPoint.name);
+        setTitle(mPoint.mName);
 
         tvDescription = (TextView) findViewById(R.id.tvDescription);
 
-        tvDescription.setText(mPoint.description);
+        tvDescription.setText(mPoint.mDescription);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class PlaceDescriptionActivity extends AppCompatActivity {
         Uri uri = Uri.parse("content://" +
                 MyContentProvider.AUTHORITY + "/" + MyContentProvider.PLACES_PATH);
 
-        getContentResolver().delete(uri, DBHelper.FIELD_ID + " = " + mPoint.id, null);
+        getContentResolver().delete(uri, DBHelper.FIELD_ID + " = " + mPoint.mId, null);
 
         Intent intent = new Intent();
         intent.putExtra(EXTRA_POINT, mPoint);
@@ -101,9 +101,9 @@ public class PlaceDescriptionActivity extends AppCompatActivity {
 
         contentValues.put(DBHelper.FIELD_LONG_DESCRIPTION, newDescription);
 
-        getContentResolver().update(uri, contentValues, DBHelper.FIELD_ID + " = " + mPoint.id, null);
+        getContentResolver().update(uri, contentValues, DBHelper.FIELD_ID + " = " + mPoint.mId, null);
 
-        mPoint.description = newDescription;
+        mPoint.mDescription = newDescription;
 
         Intent intent = new Intent();
         intent.putExtra(EXTRA_POINT, mPoint);

@@ -19,18 +19,18 @@ public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, Direc
     public DirectionsRequest(LatLng origin, PlacePoints placePoints) {
         super(DrawingPoints.class, DirectionsApi.class);
 
-        List<PlacePoints.Point> waypoints = new ArrayList<>(placePoints.points);
+        List<PlacePoints.Point> waypoints = new ArrayList<>(placePoints.mPoints);
 
-        LatLng destination = waypoints.remove(waypoints.size() - 1).position;
+        LatLng destination = waypoints.remove(waypoints.size() - 1).mPosition;
 
         this.mOrigin = origin.latitude + "," + origin.longitude;
         this.mDestination = destination.latitude + "," + destination.longitude;
 
         StringBuffer stringBuffer = new StringBuffer("optimize:true|");
         for (PlacePoints.Point waypoint : waypoints) {
-            stringBuffer.append(waypoint.position.latitude);
+            stringBuffer.append(waypoint.mPosition.latitude);
             stringBuffer.append(",");
-            stringBuffer.append(waypoint.position.longitude);
+            stringBuffer.append(waypoint.mPosition.longitude);
             stringBuffer.append("|");
         }
         stringBuffer.deleteCharAt(stringBuffer.length() - 1);

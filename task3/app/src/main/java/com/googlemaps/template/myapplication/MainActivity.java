@@ -1,23 +1,18 @@
 package com.googlemaps.template.myapplication;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.places.Place;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -43,33 +38,33 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, LocationListener, OnMapReadyCallback {
 
-    SupportMapFragment mapFragment;
-    GoogleApiClient googleApiClient;
-    Location location;
-    PlacePoints placePoints;
-    GoogleMap googleMap;
-    DrawingPoints drawingPoints;
-    boolean placesUpdatedFromNetwork = false;
-    boolean directionsUpdatedFromNetwork = false;
+    SupportMapFragment mMapFragment;
+    GoogleApiClient mGoogleApiClient;
+    Location mLocation;
+    PlacePoints mPlacePoints;
+    GoogleMap mGoogleMap;
+    DrawingPoints mDrawingPoints;
+    boolean mPlacesUpdatedFromNetwork = false;
+    boolean mDirectionsUpdatedFromNetwork = false;
 
-    Map<LatLng, PlacePoints.Point> positionToPoints;
+    Map<LatLng, PlacePoints.Point> mPositionToPoints;
 
-    private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
+    private SpiceManager mSpiceManager = new SpiceManager(SpiceService.class);
 
     @Override
     protected void onStart() {
-        spiceManager.start(this);
+        mSpiceManager.start(this);
         super.onStart();
     }
 
     @Override
     protected void onStop() {
-        spiceManager.shouldStop();
+        mSpiceManager.shouldStop();
         super.onStop();
     }
 
     protected SpiceManager getSpiceManager() {
-        return spiceManager;
+        return mSpiceManager;
     }
 
     @Override
@@ -79,27 +74,27 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
-        googleApiClient = new GoogleApiClient.Builder(this)
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(this)
                 .build();
 
         if (savedInstanceState == null) {
-            if (googleApiClient != null) googleApiClient.connect();
+            if (mGoogleApiClient != null) mGoogleApiClient.connect();
         } else {
-            location = savedInstanceState.getParcelable("location");
-            drawingPoints = savedInstanceState.getParcelable("drawingPoints");
-            placePoints = savedInstanceState.getParcelable("placePoints");
+            mLocation = savedInstanceState.getParcelable("mLocation");
+            mDrawingPoints = savedInstanceState.getParcelable("mDrawingPoints");
+            mPlacePoints = savedInstanceState.getParcelable("mPlacePoints");
             final CameraPosition cameraPosition = savedInstanceState.getParcelable("cameraPosition");
-            placesUpdatedFromNetwork = savedInstanceState.getBoolean("placesUpdatedFromNetwork");
-            directionsUpdatedFromNetwork = savedInstanceState.getBoolean("directionsUpdatedFromNetwork");
+            mPlacesUpdatedFromNetwork = savedInstanceState.getBoolean("mPlacesUpdatedFromNetwork");
+            mDirectionsUpdatedFromNetwork = savedInstanceState.getBoolean("mDirectionsUpdatedFromNetwork");
             if (cameraPosition != null) {
-                mapFragment.getMapAsync(new OnMapReadyCallback() {
+                mMapFragment.getMapAsync(new OnMapReadyCallback() {
                     @Override
                     public void onMapReady(GoogleMap googleMap) {
-                        MainActivity.this.googleMap = googleMap;
+                        MainActivity.this.mGoogleMap = googleMap;
                         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cameraPosition.target, cameraPosition.zoom));
                         drawPlaces();
                         drawPath();
@@ -112,22 +107,22 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putParcelable("location", location);
-        outState.putParcelable("drawingPoints", drawingPoints);
-        outState.putParcelable("placePoints", placePoints);
-        if (googleMap != null) outState.putParcelable("cameraPosition", googleMap.getCameraPosition());
-        outState.putBoolean("directionsUpdatedFromNetwork", directionsUpdatedFromNetwork);
-        outState.putBoolean("placesUpdatedFromNetwork", placesUpdatedFromNetwork);
+        outState.putParcelable("mLocation", mLocation);
+        outState.putParcelable("mDrawingPoints", mDrawingPoints);
+        outState.putParcelable("mPlacePoints", mPlacePoints);
+        if (mGoogleMap != null) outState.putParcelable("cameraPosition", mGoogleMap.getCameraPosition());
+        outState.putBoolean("mDirectionsUpdatedFromNetwork", mDirectionsUpdatedFromNetwork);
+        outState.putBoolean("mPlacesUpdatedFromNetwork", mPlacesUpdatedFromNetwork);
     }
 
     @Override
     public void onConnected(Bundle bundle) {
-        location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
+        mLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
-        if (location != null) {
+        if (mLocation != null) {
             processLocation();
         } else {
-            LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, new LocationRequest().setInterval(5000), this);
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, new LocationRequest().setInterval(5000), this);
         }
     }
 
@@ -140,8 +135,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             @Override
             public void onRequestSuccess(PlacePoints placePoints) {
-                MainActivity.this.placePoints = placePoints;
-                mapFragment.getMapAsync(MainActivity.this);
+                MainActivity.this.mPlacePoints = placePoints;
+                mMapFragment.getMapAsync(MainActivity.this);
             }
         });
 
@@ -149,20 +144,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void loadPointsFromNetwork() {
-        placesUpdatedFromNetwork = false;
-        directionsUpdatedFromNetwork = false;
-        GeocoderPlacesRequest request = new GeocoderPlacesRequest(location.getLongitude(), location.getLatitude());
+        mPlacesUpdatedFromNetwork = false;
+        mDirectionsUpdatedFromNetwork = false;
+        GeocoderPlacesRequest request = new GeocoderPlacesRequest(mLocation.getLongitude(), mLocation.getLatitude());
         getSpiceManager().execute(request, PlacePoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<PlacePoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
-                if (MainActivity.this.placePoints == null) showErrorDialog();
+                if (MainActivity.this.mPlacePoints == null) showErrorDialog();
             }
 
             @Override
             public void onRequestSuccess(PlacePoints placePoints) {
-                placesUpdatedFromNetwork = true;
-                MainActivity.this.placePoints = placePoints;
-                mapFragment.getMapAsync(MainActivity.this);
+                mPlacesUpdatedFromNetwork = true;
+                MainActivity.this.mPlacePoints = placePoints;
+                mMapFragment.getMapAsync(MainActivity.this);
             }
         });
     }
@@ -174,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     @Override
     public void onLocationChanged(Location location) {
-        this.location = location;
+        this.mLocation = location;
         processLocation();
     }
 
@@ -182,11 +177,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public void onMapReady(final GoogleMap googleMap) {
         googleMap.clear();
 
-        this.googleMap = googleMap;
+        this.mGoogleMap = googleMap;
 
         drawPlaces();
 
-        if (!placesUpdatedFromNetwork) {
+        if (!mPlacesUpdatedFromNetwork) {
             loadDirectionsFromCache();
         } else {
             loadDirectionsFromNetwork();
@@ -204,18 +199,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             @Override
             public void onRequestSuccess(DrawingPoints drawingPoints) {
-                MainActivity.this.drawingPoints = drawingPoints;
+                MainActivity.this.mDrawingPoints = drawingPoints;
                 drawPath();
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                        new LatLng(location.getLatitude(), location.getLongitude()), 11));
-                if (!directionsUpdatedFromNetwork) loadPointsFromNetwork();
+                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                        new LatLng(mLocation.getLatitude(), mLocation.getLongitude()), 11));
+                if (!mDirectionsUpdatedFromNetwork) loadPointsFromNetwork();
             }
         });
     }
 
     private void loadDirectionsFromNetwork() {
-        DirectionsRequest request = new DirectionsRequest(new LatLng(location.getLatitude(),
-                location.getLongitude()), placePoints);
+        DirectionsRequest request = new DirectionsRequest(new LatLng(mLocation.getLatitude(),
+                mLocation.getLongitude()), mPlacePoints);
         getSpiceManager().execute(request, DrawingPoints.class, DurationInMillis.ALWAYS_EXPIRED, new RequestListener<DrawingPoints>() {
             @Override
             public void onRequestFailure(SpiceException spiceException) {
@@ -224,12 +219,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             @Override
             public void onRequestSuccess(DrawingPoints drawingPoints) {
-                MainActivity.this.drawingPoints = drawingPoints;
+                MainActivity.this.mDrawingPoints = drawingPoints;
                 drawPath();
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                        new LatLng(location.getLatitude(), location.getLongitude()), 11));
-                if (!directionsUpdatedFromNetwork) {
-                    directionsUpdatedFromNetwork = true;
+                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                        new LatLng(mLocation.getLatitude(), mLocation.getLongitude()), 11));
+                if (!mDirectionsUpdatedFromNetwork) {
+                    mDirectionsUpdatedFromNetwork = true;
                     showDataUpdatedDialog();
                 }
 
@@ -261,7 +256,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 }).setNeutralButton(getString(R.string.main_dialog_error_retry_button), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (placesUpdatedFromNetwork) loadDirectionsFromNetwork();
+                if (mPlacesUpdatedFromNetwork) loadDirectionsFromNetwork();
                 else loadPointsFromNetwork();
             }
         }).show();
@@ -269,42 +264,42 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     private void drawPath() {
         PolylineOptions polylineOptions = new PolylineOptions().color(Color.BLUE);
-        for (LatLng point : drawingPoints.points) {
+        for (LatLng point : mDrawingPoints.points) {
             polylineOptions.add(point);
         }
-        googleMap.addPolyline(polylineOptions);
+        mGoogleMap.addPolyline(polylineOptions);
     }
 
     private void drawPlaces() {
 
-        positionToPoints = new HashMap<>();
+        mPositionToPoints = new HashMap<>();
 
         //adding places around us
-        for (PlacePoints.Point item : placePoints.points) {
-            String name = item.name;
+        for (PlacePoints.Point item : mPlacePoints.mPoints) {
+            String name = item.mName;
 
-            LatLng position = item.position;
+            LatLng position = item.mPosition;
 
-            positionToPoints.put(position, item);
+            mPositionToPoints.put(position, item);
 
-            googleMap.addMarker(new MarkerOptions()
+            mGoogleMap.addMarker(new MarkerOptions()
                             .title(name)
                             .position(position)
             );
 
         }
 
-        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+        mGoogleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
-                PlacePoints.Point point = positionToPoints.get(marker.getPosition());
+                PlacePoints.Point point = mPositionToPoints.get(marker.getPosition());
                 showDescriptionActivity(point);
             }
         });
 
-        //adding current location
-        googleMap.addCircle(new CircleOptions()
-                .center(new LatLng(location.getLatitude(), location.getLongitude()))
+        //adding current mLocation
+        mGoogleMap.addCircle(new CircleOptions()
+                .center(new LatLng(mLocation.getLatitude(), mLocation.getLongitude()))
                 .fillColor(Color.BLUE)
                 .radius(100));
     }
@@ -322,15 +317,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             if (resultCode == PlaceDescriptionActivity.RESULT_CHANGED_DESCRIPTION) {
                 PlacePoints.Point point =
                         data.getParcelableExtra(PlaceDescriptionActivity.EXTRA_POINT);
-                positionToPoints.get(point.position).description = point.description;
-                googleMap.clear();
+                mPositionToPoints.get(point.mPosition).mDescription = point.mDescription;
+                mGoogleMap.clear();
                 drawPlaces();
                 drawPath();
             } else if (resultCode == PlaceDescriptionActivity.RESULT_ITEM_REMOVED) {
                 PlacePoints.Point point =
                         data.getParcelableExtra(PlaceDescriptionActivity.EXTRA_POINT);
-                placePoints.points.remove(placePoints.points.indexOf(point));
-                googleMap.clear();
+                mPlacePoints.mPoints.remove(mPlacePoints.mPoints.indexOf(point));
+                mGoogleMap.clear();
                 drawPlaces();
                 loadDirectionsFromNetwork();
             }

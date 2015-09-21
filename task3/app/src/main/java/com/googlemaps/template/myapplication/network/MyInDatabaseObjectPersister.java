@@ -23,7 +23,7 @@ import java.util.Map;
  */
 public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
 
-    private Context context;
+    private Context mContext;
 
     private static Map<Class<?>, Uri> classToUri;
 
@@ -32,14 +32,14 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
     static {
         classToUri = new HashMap<>();
         classToUri.put(DrawingPoints.class, Uri.parse("content://" +
-            MyContentProvider.AUTHORITY + "/" + MyContentProvider.DIRECTIONS_PATH));
+                MyContentProvider.AUTHORITY + "/" + MyContentProvider.DIRECTIONS_PATH));
         classToUri.put(PlacePoints.class, Uri.parse("content://" +
                 MyContentProvider.AUTHORITY + "/" + MyContentProvider.PLACES_PATH));
     }
 
     public MyInDatabaseObjectPersister(Application application, Class<T> clazz) {
         super(application, clazz);
-        context = application;
+        mContext = application;
         mCacheClass = clazz;
     }
 
@@ -47,7 +47,7 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
     public T loadDataFromCache(Object cacheKey, long maxTimeInCache) throws CacheLoadingException {
         Uri uri = classToUri.get(mCacheClass);
 
-        Cursor cursor = context.getContentResolver().query(uri, null, null, null, null);
+        Cursor cursor = mContext.getContentResolver().query(uri, null, null, null, null);
 
         if (mCacheClass == DrawingPoints.class) {
             List<LatLng> pointsList = new ArrayList<>();
@@ -126,20 +126,20 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
                 i++;
             }
 
-            context.getContentResolver().bulkInsert(uri, cvArr);
+            mContext.getContentResolver().bulkInsert(uri, cvArr);
         } else if (mCacheClass == PlacePoints.class) {
             PlacePoints placePoints = (PlacePoints) data;
 
             ContentValues contentValues = new ContentValues();
 
-            for (PlacePoints.Point point : placePoints.points) {
+            for (PlacePoints.Point point : placePoints.mPoints) {
                 contentValues.clear();
-                contentValues.put(DBHelper.FIELD_LATITUDE, point.position.latitude);
-                contentValues.put(DBHelper.FIELD_LONGITUDE, point.position.longitude);
-                contentValues.put(DBHelper.FIELD_SHORT_DESCRIPTION, point.name);
-                contentValues.put(DBHelper.FIELD_LONG_DESCRIPTION, point.description);
-                Uri inserted = context.getContentResolver().insert(uri, contentValues);
-                point.id = Integer.parseInt(inserted.getLastPathSegment());
+                contentValues.put(DBHelper.FIELD_LATITUDE, point.mPosition.latitude);
+                contentValues.put(DBHelper.FIELD_LONGITUDE, point.mPosition.longitude);
+                contentValues.put(DBHelper.FIELD_SHORT_DESCRIPTION, point.mName);
+                contentValues.put(DBHelper.FIELD_LONG_DESCRIPTION, point.mDescription);
+                Uri inserted = mContext.getContentResolver().insert(uri, contentValues);
+                point.mId = Integer.parseInt(inserted.getLastPathSegment());
             }
         }
 
@@ -155,7 +155,7 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
     @Override
     public void removeAllDataFromCache() {
         Uri uri = classToUri.get(mCacheClass);
-        context.getContentResolver().delete(uri, null, null);
+        mContext.getContentResolver().delete(uri, null, null);
     }
 
     @Override
@@ -166,7 +166,7 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
     @Override
     public boolean isDataInCache(Object cacheKey, long maxTimeInCacheBeforeExpiry) {
         Uri uri = classToUri.get(mCacheClass);
-        Cursor cursor = context.getContentResolver().query(uri, new String[]{"count(*) AS count"}, null, null, null);
+        Cursor cursor = mContext.getContentResolver().query(uri, new String[]{"count(*) AS count"}, null, null, null);
         cursor.moveToFirst();
         int count = cursor.getInt(0);
         cursor.close();

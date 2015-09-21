@@ -2,10 +2,8 @@ package com.googlemaps.template.myapplication.network;
 
 import android.app.Application;
 
-import com.google.android.gms.location.places.Place;
 import com.octo.android.robospice.persistence.CacheManager;
 import com.octo.android.robospice.persistence.exception.CacheCreationException;
-import com.octo.android.robospice.persistence.retrofit.JacksonRetrofitObjectPersisterFactory;
 import com.octo.android.robospice.retrofit.RetrofitGsonSpiceService;
 
 import org.apache.commons.lang3.NotImplementedException;
@@ -20,17 +18,17 @@ import retrofit.RestAdapter;
  */
 public class SpiceService extends RetrofitGsonSpiceService {
 
-    RestAdapter.Builder restAdapterBuilder;
-    private Map<Class<?>, Object> retrofitInterfaceToServiceMap = new HashMap<Class<?>, Object>();
-    private Map<Class<?>, String> retrofitInterfaceToUrl = new HashMap<Class<?>, String>() {{
-        put(PlacesApi.class, "https://geocode-maps.yandex.ru/1.x");
+    RestAdapter.Builder mRestAdapterBuilder;
+    private Map<Class<?>, Object> mRetrofitInterfaceToServiceMap = new HashMap<Class<?>, Object>();
+    private Map<Class<?>, String> mRetrofitInterfaceToUrl = new HashMap<Class<?>, String>() {{
+        put(PlacesApi.class, "https://mGeocode-maps.yandex.ru/1.x");
         put(DirectionsApi.class, "https://maps.googleapis.com/maps/api/directions");
     }};
 
     @Override
     public void onCreate() {
         super.onCreate();
-        restAdapterBuilder = new RestAdapter.Builder().setConverter(getConverter());
+        mRestAdapterBuilder = new RestAdapter.Builder().setConverter(getConverter());
     }
 
     @Override
@@ -45,10 +43,10 @@ public class SpiceService extends RetrofitGsonSpiceService {
 
     @Override
     protected <T> T getRetrofitService(Class<T> serviceClass) {
-        T service = (T) retrofitInterfaceToServiceMap.get(serviceClass);
+        T service = (T) mRetrofitInterfaceToServiceMap.get(serviceClass);
         if (service == null) {
-            service = restAdapterBuilder.setEndpoint(retrofitInterfaceToUrl.get(serviceClass)).build().create(serviceClass);
-            retrofitInterfaceToServiceMap.put(serviceClass, service);
+            service = mRestAdapterBuilder.setEndpoint(mRetrofitInterfaceToUrl.get(serviceClass)).build().create(serviceClass);
+            mRetrofitInterfaceToServiceMap.put(serviceClass, service);
         }
         return service;
     }

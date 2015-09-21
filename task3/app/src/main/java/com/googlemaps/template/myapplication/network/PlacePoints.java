@@ -12,43 +12,43 @@ import java.util.List;
  */
 public class PlacePoints implements Parcelable {
 
-    public List<Point> points;
+    public List<Point> mPoints;
 
     public PlacePoints(List<Point> points) {
-        this.points = points;
+        this.mPoints = points;
     }
 
     public static class Point implements Parcelable {
         public Point(String name, LatLng position) {
-            this.name = name;
-            this.position = position;
+            this.mName = name;
+            this.mPosition = position;
         }
 
-        public int id;
-        public String name;
-        public LatLng position;
-        public String description;
+        public int mId;
+        public String mName;
+        public LatLng mPosition;
+        public String mDescription;
 
         public Point(String name, LatLng position, String description, int id) {
-            this.name = name;
-            this.position = position;
-            this.description = description;
-            this.id = id;
+            this.mName = name;
+            this.mPosition = position;
+            this.mDescription = description;
+            this.mId = id;
         }
 
         protected Point(Parcel in) {
-            id = in.readInt();
-            name = in.readString();
-            position = in.readParcelable(LatLng.class.getClassLoader());
-            description = in.readString();
+            mId = in.readInt();
+            mName = in.readString();
+            mPosition = in.readParcelable(LatLng.class.getClassLoader());
+            mDescription = in.readString();
         }
 
         @Override
         public void writeToParcel(Parcel dest, int flags) {
-            dest.writeInt(id);
-            dest.writeString(name);
-            dest.writeParcelable(position, flags);
-            dest.writeString(description);
+            dest.writeInt(mId);
+            dest.writeString(mName);
+            dest.writeParcelable(mPosition, flags);
+            dest.writeString(mDescription);
         }
 
         @Override
@@ -75,23 +75,23 @@ public class PlacePoints implements Parcelable {
 
             Point point = (Point) o;
 
-            return id == point.id;
+            return mId == point.mId;
 
         }
 
         @Override
         public int hashCode() {
-            return id;
+            return mId;
         }
     }
 
     protected PlacePoints(Parcel in) {
-        points = in.createTypedArrayList(Point.CREATOR);
+        mPoints = in.createTypedArrayList(Point.CREATOR);
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeTypedList(points);
+        dest.writeTypedList(mPoints);
     }
 
     @Override
