@@ -1,6 +1,7 @@
 package com.googlemaps.template.myapplication.network;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.googlemaps.template.myapplication.BuildConfig;
 import com.googlemaps.template.myapplication.Utils;
 import com.octo.android.robospice.request.retrofit.RetrofitSpiceRequest;
 
@@ -11,10 +12,9 @@ import java.util.List;
  * Created by ilya on 15.09.15.
  */
 public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, DirectionsApi> {
-    String waypoints;
-    String origin;
-    String destination;
-    String appKey = "AIzaSyD3GCtchyQ3zJ33efR9iB39LLZtXSRqSOQ";
+    String mWaypoints;
+    String mOrigin;
+    String mDestination;
 
     public DirectionsRequest(LatLng origin, PlacePoints placePoints) {
         super(DrawingPoints.class, DirectionsApi.class);
@@ -23,8 +23,8 @@ public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, Direc
 
         LatLng destination = waypoints.remove(waypoints.size() - 1).position;
 
-        this.origin = origin.latitude + "," + origin.longitude;
-        this.destination = destination.latitude + "," + destination.longitude;
+        this.mOrigin = origin.latitude + "," + origin.longitude;
+        this.mDestination = destination.latitude + "," + destination.longitude;
 
         StringBuffer stringBuffer = new StringBuffer("optimize:true|");
         for (PlacePoints.Point waypoint : waypoints) {
@@ -34,7 +34,7 @@ public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, Direc
             stringBuffer.append("|");
         }
         stringBuffer.deleteCharAt(stringBuffer.length() - 1);
-        this.waypoints = stringBuffer.toString();
+        this.mWaypoints = stringBuffer.toString();
     }
 
     @Override
@@ -42,7 +42,7 @@ public class DirectionsRequest extends RetrofitSpiceRequest<DrawingPoints, Direc
 
         List<LatLng> points = new ArrayList<>();
 
-        Directions directions =  getService().getDirections(waypoints, origin, destination, appKey);
+        Directions directions =  getService().getDirections(mWaypoints, mOrigin, mDestination, BuildConfig.DIRECTIONS_APP_KEY);
         for (Directions.Route route : directions.routes) {
             for (Directions.Leg leg : route.legs) {
                 for (Directions.Step step : leg.steps) {

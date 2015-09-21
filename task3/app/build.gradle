@@ -15,6 +15,8 @@ android {
                 googleApiKey: "AIzaSyBnS4MMpn-g1kJge_dxB-pqiFsGTOvQNiM",
                 debugMode: false
         ]
+
+        buildConfigField "String", "DIRECTIONS_APP_KEY", "\"AIzaSyD3GCtchyQ3zJ33efR9iB39LLZtXSRqSOQ\""
     }
 
     signingConfigs {
