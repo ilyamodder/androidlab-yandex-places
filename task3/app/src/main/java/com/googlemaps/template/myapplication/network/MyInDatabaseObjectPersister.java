@@ -134,7 +134,8 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
                 contentValues.put(DBHelper.FIELD_LONGITUDE, point.position.longitude);
                 contentValues.put(DBHelper.FIELD_SHORT_DESCRIPTION, point.name);
                 contentValues.put(DBHelper.FIELD_LONG_DESCRIPTION, point.description);
-                context.getContentResolver().insert(uri, contentValues);
+                Uri inserted = context.getContentResolver().insert(uri, contentValues);
+                point.id = Integer.parseInt(inserted.getLastPathSegment());
             }
         }
 

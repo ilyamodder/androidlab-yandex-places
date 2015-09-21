@@ -20,6 +20,7 @@ public class PlaceDescriptionActivity extends AppCompatActivity {
 
     public static final String EXTRA_POINT = "point";
     public static final int RESULT_CHANGED_DESCRIPTION = 1;
+    public static final int RESULT_ITEM_REMOVED = 2;
 
     PlacePoints.Point mPoint;
 
@@ -57,9 +58,23 @@ public class PlaceDescriptionActivity extends AppCompatActivity {
         if (id == R.id.action_edit) {
             showEditDialog();
             return true;
+        } else if (id == R.id.action_delete) {
+            delete();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void delete() {
+        Uri uri = Uri.parse("content://" +
+                MyContentProvider.AUTHORITY + "/" + MyContentProvider.PLACES_PATH);
+
+        getContentResolver().delete(uri, DBHelper.FIELD_ID + " = " + mPoint.id, null);
+
+        Intent intent = new Intent();
+        intent.putExtra(EXTRA_POINT, mPoint);
+        setResult(RESULT_ITEM_REMOVED, intent);
+        finish();
     }
 
     private void showEditDialog() {

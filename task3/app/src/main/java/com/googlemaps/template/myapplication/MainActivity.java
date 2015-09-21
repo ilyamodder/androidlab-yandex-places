@@ -181,26 +181,30 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         drawPlaces();
 
         if (!placesUpdatedFromNetwork) {
-            getSpiceManager().getFromCache(DrawingPoints.class, DrawingPoints.class, DurationInMillis.ALWAYS_RETURNED, new RequestListener<DrawingPoints>() {
-                @Override
-                public void onRequestFailure(SpiceException spiceException) {
-                    loadDirectionsFromNetwork();
-                }
-
-                @Override
-                public void onRequestSuccess(DrawingPoints drawingPoints) {
-                    MainActivity.this.drawingPoints = drawingPoints;
-                    drawPath();
-                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                            new LatLng(location.getLatitude(), location.getLongitude()), 11));
-                    loadPointsFromNetwork();
-                }
-            });
+            loadDirectionsFromCache();
         } else {
             loadDirectionsFromNetwork();
         }
 
 
+    }
+
+    private void loadDirectionsFromCache() {
+        getSpiceManager().getFromCache(DrawingPoints.class, DrawingPoints.class, DurationInMillis.ALWAYS_RETURNED, new RequestListener<DrawingPoints>() {
+            @Override
+            public void onRequestFailure(SpiceException spiceException) {
+                loadDirectionsFromNetwork();
+            }
+
+            @Override
+            public void onRequestSuccess(DrawingPoints drawingPoints) {
+                MainActivity.this.drawingPoints = drawingPoints;
+                drawPath();
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                        new LatLng(location.getLatitude(), location.getLongitude()), 11));
+                if (!directionsUpdatedFromNetwork) loadPointsFromNetwork();
+            }
+        });
     }
 
     private void loadDirectionsFromNetwork() {
@@ -218,8 +222,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 drawPath();
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                         new LatLng(location.getLatitude(), location.getLongitude()), 11));
-                directionsUpdatedFromNetwork = true;
-                showDataUpdatedDialog();
+                if (!directionsUpdatedFromNetwork) {
+                    directionsUpdatedFromNetwork = true;
+                    showDataUpdatedDialog();
+                }
+
             }
         });
     }
@@ -310,8 +317,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 PlacePoints.Point point =
                         data.getParcelableExtra(PlaceDescriptionActivity.EXTRA_POINT);
                 positionToPoints.get(point.position).description = point.description;
+                googleMap.clear();
                 drawPlaces();
                 drawPath();
+            } else if (resultCode == PlaceDescriptionActivity.RESULT_ITEM_REMOVED) {
+                PlacePoints.Point point =
+                        data.getParcelableExtra(PlaceDescriptionActivity.EXTRA_POINT);
+                placePoints.points.remove(placePoints.points.indexOf(point));
+                googleMap.clear();
+                drawPlaces();
+                loadDirectionsFromNetwork();
             }
         }
     }
