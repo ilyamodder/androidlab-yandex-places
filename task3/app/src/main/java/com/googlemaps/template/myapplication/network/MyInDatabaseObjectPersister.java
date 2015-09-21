@@ -115,14 +115,18 @@ public class MyInDatabaseObjectPersister<T> extends ObjectPersister<T> {
         if (mCacheClass == DrawingPoints.class) {
             DrawingPoints drawingPoints = (DrawingPoints) data;
 
-            ContentValues contentValues = new ContentValues();
+            ContentValues[] cvArr = new ContentValues[drawingPoints.points.size()];
+            int i = 0;
 
             for (LatLng point : drawingPoints.points) {
-                contentValues.clear();
+                ContentValues contentValues = new ContentValues();
                 contentValues.put(DBHelper.FIELD_LATITUDE, point.latitude);
                 contentValues.put(DBHelper.FIELD_LONGITUDE, point.longitude);
-                context.getContentResolver().insert(uri, contentValues);
+                cvArr[i] = contentValues;
+                i++;
             }
+
+            context.getContentResolver().bulkInsert(uri, cvArr);
         } else if (mCacheClass == PlacePoints.class) {
             PlacePoints placePoints = (PlacePoints) data;
 

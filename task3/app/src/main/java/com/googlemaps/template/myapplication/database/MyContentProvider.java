@@ -146,4 +146,35 @@ public class MyContentProvider extends ContentProvider {
         int count = mDb.update(table, values, selection, selectionArgs);
         return count;
     }
+
+    @Override
+    public int bulkInsert(Uri uri, ContentValues[] values) {
+        String table;
+
+        switch (uriMatcher.match(uri)) {
+            case URI_DIRECTIONS:
+                table = DBHelper.TABLE_DIRECTIONS;
+                break;
+            case URI_PLACES:
+                table = DBHelper.TABLE_POINTS;
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown uri " + uri.toString());
+
+        }
+
+        mDb = mDBHelper.getWritableDatabase();
+
+        mDb.beginTransaction();
+        try {
+            for (ContentValues value : values) {
+                mDb.insert(table, null, value);
+            }
+            mDb.setTransactionSuccessful();
+        } finally {
+            mDb.endTransaction();
+        }
+
+        return values.length;
+    }
 }
