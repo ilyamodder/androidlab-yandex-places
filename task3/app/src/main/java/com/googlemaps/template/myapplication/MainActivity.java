@@ -93,15 +93,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             drawingPoints = savedInstanceState.getParcelable("drawingPoints");
             placePoints = savedInstanceState.getParcelable("placePoints");
             final CameraPosition cameraPosition = savedInstanceState.getParcelable("cameraPosition");
-            mapFragment.getMapAsync(new OnMapReadyCallback() {
-                @Override
-                public void onMapReady(GoogleMap googleMap) {
-                    MainActivity.this.googleMap = googleMap;
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cameraPosition.target, cameraPosition.zoom));
-                    drawPlaces();
-                    drawPath();
-                }
-            });
+            placesUpdatedFromNetwork = savedInstanceState.getBoolean("placesUpdatedFromNetwork");
+            directionsUpdatedFromNetwork = savedInstanceState.getBoolean("directionsUpdatedFromNetwork");
+            if (cameraPosition != null) {
+                mapFragment.getMapAsync(new OnMapReadyCallback() {
+                    @Override
+                    public void onMapReady(GoogleMap googleMap) {
+                        MainActivity.this.googleMap = googleMap;
+                        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cameraPosition.target, cameraPosition.zoom));
+                        drawPlaces();
+                        drawPath();
+                    }
+                });
+            }
         }
     }
 
@@ -111,7 +115,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         outState.putParcelable("location", location);
         outState.putParcelable("drawingPoints", drawingPoints);
         outState.putParcelable("placePoints", placePoints);
-        outState.putParcelable("cameraPosition", googleMap.getCameraPosition());
+        if (googleMap != null) outState.putParcelable("cameraPosition", googleMap.getCameraPosition());
+        outState.putBoolean("directionsUpdatedFromNetwork", directionsUpdatedFromNetwork);
+        outState.putBoolean("placesUpdatedFromNetwork", placesUpdatedFromNetwork);
     }
 
     @Override
