@@ -1,17 +1,23 @@
 package com.googlemaps.template.myapplication;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Place;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -19,6 +25,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.googlemaps.template.myapplication.network.DirectionsRequest;
@@ -31,6 +38,9 @@ import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, LocationListener, OnMapReadyCallback {
 
     SupportMapFragment mapFragment;
@@ -41,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     DrawingPoints drawingPoints;
     boolean placesUpdatedFromNetwork = false;
     boolean directionsUpdatedFromNetwork = false;
+
+    Map<LatLng, PlacePoints.Point> positionToPoints;
 
     private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
 
@@ -251,11 +263,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     private void drawPlaces() {
+
+        positionToPoints = new HashMap<>();
+
         //adding places around us
         for (PlacePoints.Point item : placePoints.points) {
             String name = item.name;
 
             LatLng position = item.position;
+
+            positionToPoints.put(position, item);
 
             googleMap.addMarker(new MarkerOptions()
                             .title(name)
@@ -264,10 +281,38 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         }
 
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                PlacePoints.Point point = positionToPoints.get(marker.getPosition());
+                showDescriptionActivity(point);
+            }
+        });
+
         //adding current location
         googleMap.addCircle(new CircleOptions()
                 .center(new LatLng(location.getLatitude(), location.getLongitude()))
                 .fillColor(Color.BLUE)
                 .radius(100));
+    }
+
+    private void showDescriptionActivity(PlacePoints.Point point) {
+        Intent intent = new Intent(this, PlaceDescriptionActivity.class);
+        intent.putExtra(PlaceDescriptionActivity.EXTRA_POINT, point);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if (resultCode == PlaceDescriptionActivity.RESULT_CHANGED_DESCRIPTION) {
+                PlacePoints.Point point =
+                        data.getParcelableExtra(PlaceDescriptionActivity.EXTRA_POINT);
+                positionToPoints.get(point.position).description = point.description;
+                drawPlaces();
+                drawPath();
+            }
+        }
     }
 }

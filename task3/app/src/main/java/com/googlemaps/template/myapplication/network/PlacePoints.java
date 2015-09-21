@@ -37,14 +37,18 @@ public class PlacePoints implements Parcelable {
         }
 
         protected Point(Parcel in) {
+            id = in.readInt();
             name = in.readString();
             position = in.readParcelable(LatLng.class.getClassLoader());
+            description = in.readString();
         }
 
         @Override
         public void writeToParcel(Parcel dest, int flags) {
+            dest.writeInt(id);
             dest.writeString(name);
             dest.writeParcelable(position, flags);
+            dest.writeString(description);
         }
 
         @Override
@@ -63,6 +67,22 @@ public class PlacePoints implements Parcelable {
                 return new Point[size];
             }
         };
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Point point = (Point) o;
+
+            return id == point.id;
+
+        }
+
+        @Override
+        public int hashCode() {
+            return id;
+        }
     }
 
     protected PlacePoints(Parcel in) {
