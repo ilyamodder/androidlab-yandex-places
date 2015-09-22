@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -98,6 +99,8 @@ public class MainFragment extends Fragment {
         } else {
             mAlarmMgr.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
         }
+
+        Toast.makeText(getActivity(), "Уведоиление запланировано", Toast.LENGTH_SHORT).show();
 
     }
 
