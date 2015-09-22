@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Notifications</string>
+    <string name="main_notification_title">Уведомление</string>
+
+    <string-array name="main_list">
+        <item>Показать уведомление сейчас</item>
+        <item>Показать уведомление в 15:00</item>
+        <item>Показать уведомление при подключении к Wi-Fi</item>
+    </string-array>
+</resources>
