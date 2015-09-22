@@ -107,4 +107,28 @@ public class MainFragment extends Fragment {
     private void showOnWifi() {
 
     }
+
+    private void showAfterOneMinute() {
+        Intent intent = new Intent(getActivity(), NotificationReceiver.class);
+        intent.setAction(NotificationReceiver.ACTION_ALARM_TICK);
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), 0,
+                intent, 0);
+
+        long time = System.currentTimeMillis() + 1000*60;
+
+        if (Build.VERSION.SDK_INT >= 19) {
+            mAlarmMgr.setExact(AlarmManager.RTC_WAKEUP, time, pendingIntent);
+        } else {
+            mAlarmMgr.set(AlarmManager.RTC_WAKEUP, time, pendingIntent);
+        }
+
+        Toast.makeText(getActivity(), "Уведоиление запланировано", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        showAfterOneMinute();
+    }
 }
