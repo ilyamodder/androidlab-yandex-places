@@ -24,10 +24,15 @@
             android:enabled="true"
             android:exported="true" >
             <intent-filter>
-                <action android:name="ru.ilyamodder.notification.ALARM_TICK"/>
+                <action android:name="ru.ilyamodder.notification.ALARM_TICK" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".BatteryListenerService"
+            android:enabled="true" >
+        </service>
     </application>
 
 </manifest>
