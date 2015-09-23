@@ -24,7 +24,7 @@ public class BatteryListenerService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (intent.getAction().equals(ACTION_START_LISTENING)) {
+        if (intent != null && intent.getAction() != null && intent.getAction().equals(ACTION_START_LISTENING)) {
             mBroadcastReceiver = new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
