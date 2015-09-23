@@ -110,7 +110,7 @@ public class MainFragment extends Fragment {
             mAlarmMgr.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
         }
 
-        Toast.makeText(getActivity(), "Уведоиление запланировано", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), R.string.main_notification_scheduled, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -118,9 +118,9 @@ public class MainFragment extends Fragment {
         final EditText editText = new EditText(getActivity());
 
         new AlertDialog.Builder(getActivity())
-                .setTitle("Редактирование описания")
+                .setTitle(getActivity().getString(R.string.main_wifi_dialog_title))
                 .setView(editText)
-                .setPositiveButton("Изменить", new DialogInterface.OnClickListener() {
+                .setPositiveButton(getActivity().getString(R.string.main_wifi_dialog_positive_button), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         PreferenceManager.getDefaultSharedPreferences(getActivity())
@@ -146,7 +146,7 @@ public class MainFragment extends Fragment {
             mAlarmMgr.set(AlarmManager.RTC_WAKEUP, time, pendingIntent);
         }
 
-        Toast.makeText(getActivity(), "Уведоиление запланировано", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(),  R.string.main_notification_scheduled, Toast.LENGTH_SHORT).show();
     }
 
     @Override
