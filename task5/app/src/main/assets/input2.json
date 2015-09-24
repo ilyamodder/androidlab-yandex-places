@@ -1,0 +1,5045 @@
+{
+  "countries": [
+    {
+      "cities": [
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 1.203737794099915,
+            "longitude": -50.50753414825949
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 1",
+          "population": 12189644
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "LARGE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "24",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "25",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "26",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "27",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "28",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "29",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "30",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -29.013585133522405,
+            "longitude": -32.62860418672451
+          },
+          "markers": [
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 2",
+          "population": 12325027
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "SMALL"
+            },
+            {
+              "name": "12",
+              "size": "SMALL"
+            },
+            {
+              "name": "13",
+              "size": "SMALL"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            },
+            {
+              "name": "15",
+              "size": "SMALL"
+            },
+            {
+              "name": "16",
+              "size": "SMALL"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 42.85444291437014,
+            "longitude": -72.49772921916444
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 3",
+          "population": 770450
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 72.79129225967024,
+            "longitude": -49.07264900063743
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 4",
+          "population": 12099400
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            },
+            {
+              "name": "28",
+              "size": "SMALL"
+            },
+            {
+              "name": "29",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 107.40460198540234,
+            "longitude": -29.31020827740076
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 5",
+          "population": 6849269
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 15.737695286235592,
+            "longitude": -87.40576748104637
+          },
+          "markers": [],
+          "name": "ru City 6",
+          "population": 30075621
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "24",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            },
+            {
+              "name": "28",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -52.53165686599659,
+            "longitude": -78.26751558102787
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT"
+          ],
+          "name": "ru City 7",
+          "population": 46182164
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 56.546767036225916,
+            "longitude": -99.4481620391262
+          },
+          "markers": [
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 8",
+          "population": 11669632
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -31.899196699848154,
+            "longitude": -85.44903408721314
+          },
+          "markers": [],
+          "name": "ru City 9",
+          "population": 30949309
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -94.04291853490054,
+            "longitude": 35.19699038530113
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "STATE_CENTER"
+          ],
+          "name": "ru City 10",
+          "population": 24949303
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 45.887269696863136,
+            "longitude": 82.64930690866979
+          },
+          "markers": [
+            "STATE_CENTER"
+          ],
+          "name": "ru City 11",
+          "population": 39700672
+        }
+      ],
+      "code": "RU",
+      "name": "Russia"
+    },
+    {
+      "cities": [
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -104.71194255680099,
+            "longitude": 27.050413348198422
+          },
+          "markers": [
+            "WITH_AIRPORT",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "it City 1",
+          "population": 37927500
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "24",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "25",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "26",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "27",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "28",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 38.87068715542361,
+            "longitude": 28.3433441073795
+          },
+          "markers": [
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "it City 2",
+          "population": 12225727
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "SMALL"
+            },
+            {
+              "name": "12",
+              "size": "SMALL"
+            },
+            {
+              "name": "13",
+              "size": "SMALL"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            },
+            {
+              "name": "15",
+              "size": "SMALL"
+            },
+            {
+              "name": "16",
+              "size": "SMALL"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -96.15684003358903,
+            "longitude": -10.669544600647608
+          },
+          "markers": [],
+          "name": "it City 3",
+          "population": 4799639
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 88.57959216541794,
+            "longitude": 117.00811989724961
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "STATE_CENTER"
+          ],
+          "name": "it City 4",
+          "population": 9759863
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 101.222046566006,
+            "longitude": 5.688483975629279
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "it City 5",
+          "population": 40313414
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 82.89418032202735,
+            "longitude": -66.95170226656371
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER"
+          ],
+          "name": "it City 6",
+          "population": 31755092
+        }
+      ],
+      "code": "IT",
+      "name": "Italy"
+    },
+    {
+      "cities": [
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 103.88528204492032,
+            "longitude": 62.518845203723
+          },
+          "markers": [
+            "RESORT"
+          ],
+          "name": "fr City 1",
+          "population": 18552479
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "SMALL"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -29.820768421442708,
+            "longitude": -104.40431157873579
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT"
+          ],
+          "name": "fr City 2",
+          "population": 32198421
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 66.37328195913148,
+            "longitude": 47.07787649215802
+          },
+          "markers": [
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "fr City 3",
+          "population": 28873254
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -16.23826317642966,
+            "longitude": 42.75188501642115
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT"
+          ],
+          "name": "fr City 4",
+          "population": 25083644
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -112.51829386638687,
+            "longitude": -11.500708774448478
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "fr City 5",
+          "population": 29734813
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 4.251790569637599,
+            "longitude": 48.11941059216657
+          },
+          "markers": [],
+          "name": "fr City 6",
+          "population": 26104532
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -52.57950619754541,
+            "longitude": 5.162668857116457
+          },
+          "markers": [],
+          "name": "fr City 7",
+          "population": 38324361
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "SMALL"
+            },
+            {
+              "name": "8",
+              "size": "SMALL"
+            },
+            {
+              "name": "9",
+              "size": "SMALL"
+            },
+            {
+              "name": "10",
+              "size": "SMALL"
+            },
+            {
+              "name": "11",
+              "size": "SMALL"
+            },
+            {
+              "name": "12",
+              "size": "SMALL"
+            },
+            {
+              "name": "13",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -26.973009424395524,
+            "longitude": -82.7996430493136
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "fr City 8",
+          "population": 36310291
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -51.55558295127568,
+            "longitude": -6.097037809889421
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "STATE_CENTER",
+            "BUSINESS_CENTER",
+            "RESORT"
+          ],
+          "name": "fr City 9",
+          "population": 48666804
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 67.80084121661255,
+            "longitude": -62.20425372169505
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "COUNTRY_CAPITAL"
+          ],
+          "name": "fr City 10",
+          "population": 4479530
+        }
+      ],
+      "code": "FR",
+      "name": "France"
+    },
+    {
+      "cities": [
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -83.45477936061367,
+            "longitude": 84.25350848898385
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER",
+            "STATE_CENTER"
+          ],
+          "name": "de City 1",
+          "population": 11480366
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 107.00019235091578,
+            "longitude": 90.83600135152834
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 2",
+          "population": 26152495
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "SMALL"
+            },
+            {
+              "name": "13",
+              "size": "SMALL"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            },
+            {
+              "name": "15",
+              "size": "SMALL"
+            },
+            {
+              "name": "16",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 117.41164330634818,
+            "longitude": -80.74039240630937
+          },
+          "markers": [
+            "COUNTRY_CAPITAL"
+          ],
+          "name": "de City 3",
+          "population": 45427690
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            },
+            {
+              "name": "28",
+              "size": "SMALL"
+            },
+            {
+              "name": "29",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 21.028659359950762,
+            "longitude": -5.63671813351494
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 4",
+          "population": 25853759
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "SMALL"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            },
+            {
+              "name": "15",
+              "size": "SMALL"
+            },
+            {
+              "name": "16",
+              "size": "SMALL"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 38.59105842295356,
+            "longitude": -50.39777692431399
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "RESORT"
+          ],
+          "name": "de City 5",
+          "population": 14708578
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 115.40138726998808,
+            "longitude": 4.091782584066492
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "STATE_CENTER",
+            "BUSINESS_CENTER",
+            "RESORT"
+          ],
+          "name": "de City 6",
+          "population": 43615254
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -56.800262925383215,
+            "longitude": -118.38384742649507
+          },
+          "markers": [
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 7",
+          "population": 27655408
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 39.320069276200286,
+            "longitude": 117.44199110994346
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 8",
+          "population": 5954181
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 118.32593238240653,
+            "longitude": 50.08423779579455
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "RESORT"
+          ],
+          "name": "de City 9",
+          "population": 9982652
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -14.712426720889802,
+            "longitude": 85.49503708595883
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 10",
+          "population": 19289179
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -42.342253603001424,
+            "longitude": 84.16934345416887
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 11",
+          "population": 35027016
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -95.8141160311842,
+            "longitude": 95.16400544535205
+          },
+          "markers": [
+            "STATE_CENTER"
+          ],
+          "name": "de City 12",
+          "population": 49513811
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -113.54970537055246,
+            "longitude": -95.59748665589665
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "RESORT"
+          ],
+          "name": "de City 13",
+          "population": 6391283
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 23.184660647638147,
+            "longitude": 14.66691691882344
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "RESORT"
+          ],
+          "name": "de City 14",
+          "population": 4812978
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -28.118695212828765,
+            "longitude": -32.42954369685366
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 15",
+          "population": 16256111
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -87.20993744501985,
+            "longitude": -31.342418783553832
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "WITH_AIRPORT",
+            "RESORT"
+          ],
+          "name": "de City 16",
+          "population": 27291247
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -52.88041401642157,
+            "longitude": 71.101253261091
+          },
+          "markers": [
+            "RESORT",
+            "WITH_AIRPORT"
+          ],
+          "name": "de City 17",
+          "population": 21547872
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 70.90745080784916,
+            "longitude": 68.59731152847041
+          },
+          "markers": [
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "de City 18",
+          "population": 22326894
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -52.209159505089545,
+            "longitude": -116.16398776345174
+          },
+          "markers": [
+            "COUNTRY_CAPITAL"
+          ],
+          "name": "de City 19",
+          "population": 21121284
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -62.121312952244374,
+            "longitude": -115.60137100367169
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "COUNTRY_CAPITAL",
+            "RESORT"
+          ],
+          "name": "de City 20",
+          "population": 21874432
+        }
+      ],
+      "code": "DE",
+      "name": "Germany"
+    },
+    {
+      "cities": [
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 20.824907347954195,
+            "longitude": -95.65882263483533
+          },
+          "markers": [
+            "WITH_AIRPORT"
+          ],
+          "name": "us City 1",
+          "population": 16472181
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 57.38231463865859,
+            "longitude": -59.223119220699914
+          },
+          "markers": [
+            "WITH_AIRPORT",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 2",
+          "population": 12418337
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 108.91842047266489,
+            "longitude": 57.23290349901934
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT"
+          ],
+          "name": "us City 3",
+          "population": 17571692
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -98.12905057722037,
+            "longitude": 35.48395227137006
+          },
+          "markers": [],
+          "name": "us City 4",
+          "population": 35763310
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 26.21628926955193,
+            "longitude": -41.94015211117498
+          },
+          "markers": [
+            "BUSINESS_CENTER"
+          ],
+          "name": "us City 5",
+          "population": 38562987
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 31.05902457161322,
+            "longitude": -34.81625684796647
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER",
+            "WITH_AIRPORT"
+          ],
+          "name": "us City 6",
+          "population": 39757740
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -107.02562155187309,
+            "longitude": 13.301323346523976
+          },
+          "markers": [
+            "BUSINESS_CENTER"
+          ],
+          "name": "us City 7",
+          "population": 31724908
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "24",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "25",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 5.131308955819556,
+            "longitude": -24.85406910996252
+          },
+          "markers": [
+            "STATE_CENTER"
+          ],
+          "name": "us City 8",
+          "population": 22116998
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            },
+            {
+              "name": "28",
+              "size": "SMALL"
+            },
+            {
+              "name": "29",
+              "size": "SMALL"
+            },
+            {
+              "name": "30",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 97.36164619765799,
+            "longitude": -19.012694207332363
+          },
+          "markers": [
+            "BUSINESS_CENTER"
+          ],
+          "name": "us City 9",
+          "population": 17300465
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -113.74239819794501,
+            "longitude": -78.2745721871713
+          },
+          "markers": [
+            "WITH_AIRPORT",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 10",
+          "population": 17321589
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 97.4733878572112,
+            "longitude": 86.06007277707182
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER"
+          ],
+          "name": "us City 11",
+          "population": 10623075
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            },
+            {
+              "name": "15",
+              "size": "SMALL"
+            },
+            {
+              "name": "16",
+              "size": "SMALL"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -64.9957814371226,
+            "longitude": -110.71057935990868
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 12",
+          "population": 39676447
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -118.9033677735951,
+            "longitude": -24.033642690465513
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 13",
+          "population": 12518438
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 78.65544354113175,
+            "longitude": -71.48437752371015
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 14",
+          "population": 23404731
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 36.992990026144184,
+            "longitude": -55.168406574424516
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 15",
+          "population": 27896329
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "LARGE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -18.26778762559984,
+            "longitude": 76.75751757110893
+          },
+          "markers": [
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "us City 16",
+          "population": 9126492
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 16.29139529841833,
+            "longitude": -31.220217529593324
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "WITH_AIRPORT"
+          ],
+          "name": "us City 17",
+          "population": 5815398
+        }
+      ],
+      "code": "US",
+      "name": "USA"
+    },
+    {
+      "cities": [
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "SMALL"
+            },
+            {
+              "name": "18",
+              "size": "SMALL"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": 28.22455482693591,
+            "longitude": 101.3423977753442
+          },
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "BUSINESS_CENTER",
+            "WITH_AIRPORT",
+            "STATE_CENTER"
+          ],
+          "name": "cn City 1",
+          "population": 2824285
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "22",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "23",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": -113.97548465988854,
+            "longitude": 57.08843999716981
+          },
+          "markers": [
+            "RESORT"
+          ],
+          "name": "cn City 2",
+          "population": 42798562
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "SMALL"
+            },
+            {
+              "name": "20",
+              "size": "SMALL"
+            },
+            {
+              "name": "21",
+              "size": "SMALL"
+            },
+            {
+              "name": "22",
+              "size": "SMALL"
+            },
+            {
+              "name": "23",
+              "size": "SMALL"
+            },
+            {
+              "name": "24",
+              "size": "SMALL"
+            },
+            {
+              "name": "25",
+              "size": "SMALL"
+            },
+            {
+              "name": "26",
+              "size": "SMALL"
+            },
+            {
+              "name": "27",
+              "size": "SMALL"
+            },
+            {
+              "name": "28",
+              "size": "SMALL"
+            },
+            {
+              "name": "29",
+              "size": "SMALL"
+            },
+            {
+              "name": "30",
+              "size": "SMALL"
+            }
+          ],
+          "location": {
+            "latitude": -79.9376626729627,
+            "longitude": -90.13860681973627
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "STATE_CENTER"
+          ],
+          "name": "cn City 3",
+          "population": 9297578
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": 77.99170768661959,
+            "longitude": -24.955187961484167
+          },
+          "markers": [],
+          "name": "cn City 4",
+          "population": 15142919
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "LARGE"
+            },
+            {
+              "name": "6",
+              "size": "LARGE"
+            },
+            {
+              "name": "7",
+              "size": "LARGE"
+            },
+            {
+              "name": "8",
+              "size": "LARGE"
+            },
+            {
+              "name": "9",
+              "size": "LARGE"
+            },
+            {
+              "name": "10",
+              "size": "LARGE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "15",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "16",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "17",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "18",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "19",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "20",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "21",
+              "size": "MIDDLE"
+            }
+          ],
+          "location": {
+            "latitude": 39.55724642282631,
+            "longitude": -114.7198744527847
+          },
+          "markers": [
+            "COUNTRY_CAPITAL"
+          ],
+          "name": "cn City 5",
+          "population": 14697753
+        },
+        {
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            }
+          ],
+          "location": {
+            "latitude": -89.41254140908852,
+            "longitude": -67.8703248191141
+          },
+          "markers": [
+            "BUSINESS_CENTER",
+            "RESORT",
+            "STATE_CENTER"
+          ],
+          "name": "cn City 6",
+          "population": 3014617
+        }
+      ],
+      "code": "CN",
+      "name": "China"
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "countries": [
+    {
+      "name": "Russia",
+      "code": "RU",
+      "cities": [
+        {
+          "name": "Moscow",
+          "population": "15000000",
+          "location": {
+            "latitude": "55.749792",
+            "longitude": "37.632495"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "LARGE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "9",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "10",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "11",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "12",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "13",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "14",
+              "size": "SMALL"
+            },
+            {
+              "name": "15",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "WITH_AIRPORT",
+            "BUSINESS_CENTER"
+          ]
+        },
+
+        {
+          "name": "Kazan",
+          "population": "1500000",
+          "location": {
+            "latitude": "55.7955015",
+            "longitude": "49.073303"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "LARGE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "6",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "7",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+            "STATE_CAPITAL",
+            "WITH_AIRPORT",
+            "BUSINESS_CENTER"
+          ]
+        },
+
+        {
+          "name": "Sochi",
+          "population": "467000",
+          "location": {
+            "latitude": "43.4393161",
+            "longitude": "39.9377076"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+            "WITH_AIRPORT",
+            "RESORT"
+          ]
+        },
+
+        {
+          "name": "Sochi",
+          "population": "467000",
+          "location": {
+            "latitude": "43.4393161",
+            "longitude": "39.9377076"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "8",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+            "WITH_AIRPORT",
+            "RESORT"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Sample country 1",
+      "code": "SC",
+      "cities": [
+        {
+          "name": "City name",
+          "population": "200000",
+          "location": {
+            "latitude": "53.754671",
+            "longitude": "47.99884"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "LARGE"
+            },
+            {
+              "name": "3",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "4",
+              "size": "MIDDLE"
+            },
+            {
+              "name": "5",
+              "size": "SMALL"
+            },
+            {
+              "name": "6",
+              "size": "SMALL"
+            },
+            {
+              "name": "7",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+            "COUNTRY_CAPITAL",
+            "STATE_CENTER",
+            "WITH_AIRPORT",
+            "RESORT",
+            "BUSINESS_CENTER"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Country Two",
+      "code": "CT",
+      "cities": [
+        {
+          "name": "Lalalala",
+          "population": "500000",
+          "location": {
+            "latitude": "0.998432",
+            "longitude": "14.889911"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "LARGE"
+            },
+            {
+              "name": "2",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+            "WITH_AIRPORT",
+            "RESORT"
+          ]
+        },
+
+        {
+          "name": "Abcayjnnn",
+          "population": "7600",
+          "location": {
+            "latitude": "-8.444321",
+            "longitude": "-24.763221"
+          },
+          "districts": [
+            {
+              "name": "1",
+              "size": "SMALL"
+            }
+          ],
+          "markers": [
+          ]
+        }
+      ]
+    }
+  ]
+}
